@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:extns="http://www.example.org/schema/1414617963457" xmlns:tns="http://www.example.org/wsdl/1414617963433" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Process1" targetNamespace="http://www.example.org/wsdl/1414617963433" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:import namespace="http://www.example.org/schema/1414617963457"/>
+  <wsdl:message name="operationRequest">
+    <wsdl:part element="extns:operationRequest" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="operationResponse">
+    <wsdl:part element="extns:operationResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:portType name="Process1">
+    <wsdl:operation name="operation">
+      <wsdl:input message="tns:operationRequest" name="operationInput"/>
+      <wsdl:output message="tns:operationResponse" name="operationOutput"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NewBinding" type="tns:Process1">
+  	<soap:binding style="document"
+  		transport="http://schemas.xmlsoap.org/soap/http" />
+  	<wsdl:operation name="operation">
+  		<soap:operation
+  			soapAction="http://www.example.org/wsdl/1414617963433/operation" />
+  		<wsdl:input name="operationInput">
+  			<soap:body use="literal" />
+  		</wsdl:input>
+  		<wsdl:output name="operationOutput">
+  			<soap:body use="literal" />
+  		</wsdl:output>
+  	</wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="NewService">
+  	<wsdl:port name="NewPort" binding="tns:NewBinding">
+  		<soap:address location="http://www.example.org/" />
+  	</wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BWSharedResource>
+    <name>AMQ Connection</name>
+    <resourceType>ae.shared.JMSConnectionKey</resourceType>
+    <config>
+        <NamingEnvironment>
+            <UseJNDI>true</UseJNDI>
+            <ProviderURL>tcp://localhost:61616</ProviderURL>
+            <NamingURL>tcp://localhost:61616</NamingURL>
+            <NamingInitialContextFactory>org.apache.activemq.jndi.ActiveMQInitialContextFactory</NamingInitialContextFactory>
+            <TopicFactoryName>TopicConnectionFactory</TopicFactoryName>
+            <QueueFactoryName>QueueConnectionFactory</QueueFactoryName>
+            <NamingPrincipal>system</NamingPrincipal>
+            <NamingCredential>#!8eNOsFJ0BnMGpc62lQqm57Mj/JV9NI1f</NamingCredential>
+        </NamingEnvironment>
+        <ConnectionAttributes>
+            <username/>
+            <password/>
+            <clientID/>
+            <autoGenClientID>true</autoGenClientID>
+        </ConnectionAttributes>
+        <UseXACF>false</UseXACF>
+        <UseSharedJndiConfig>false</UseSharedJndiConfig>
+        <JNDIProperties>
+            <row>
+                <Name>java.naming.factory.initial</Name>
+                <Type>string</Type>
+                <Value>org.apache.activemq.jndi.ActiveMQInitialContextFactory</Value>
+            </row>
+            <row>
+                <Name>java.naming.provider.url</Name>
+                <Type>string</Type>
+                <Value>tcp://localhost:61616</Value>
+            </row>
+        </JNDIProperties>
+    </config>
+</BWSharedResource>

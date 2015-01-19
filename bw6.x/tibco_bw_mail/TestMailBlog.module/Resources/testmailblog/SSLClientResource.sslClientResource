@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmlns:keystore="http://xsd.tns.tibco.com/bw/sharedresource/trinity/models/cred/keystore" xmlns:sslclient="http://xsd.tns.tibco.com/bw/sharedresource/trinity/models/sslclient" xmi:id="_L8Cm8AR_EeS14MrZV3r3CQ" name="testmailblog.SSLClientResource" type="sslclient:SSLClientConfiguration">
+  <jndi:reference xmi:id="_L8ItkAR_EeS14MrZV3r3CQ" key="trustStoreServiceProvider" type="keystore:KeystoreConfiguration" value="testmailblog.module.KeystoreProviderResource"/>
+  <jndi:configuration xsi:type="sslclient:SSLClientConfiguration" xmi:id="_L8ItkQR_EeS14MrZV3r3CQ"/>
+</jndi:namedResource>

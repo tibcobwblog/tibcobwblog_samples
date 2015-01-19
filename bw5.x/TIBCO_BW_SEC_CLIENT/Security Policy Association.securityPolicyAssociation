@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BWSharedResource xmlns:inLine="http://www.webserviceX.NET">
+    <name>Security Policy Association</name>
+    <resourceType>ws.security.policy.association.resource</resourceType>
+    <config>
+        <applyTo>/Process.process/SOAPRequestReply</applyTo>
+        <systemSecuritySubject>/Process.process/GlobalWeatherSoap/GetWeather</systemSecuritySubject>
+        <inbound>
+            <selectSignatureParts/>
+            <selectEncryptionParts/>
+        </inbound>
+        <outbound>
+            <selectSignatureParts/>
+            <selectEncryptionParts/>
+        </outbound>
+        <inboundMessagePolicy/>
+        <outboundMessagePolicy>/Security Policy.securityPolicy</outboundMessagePolicy>
+    </config>
+</BWSharedResource>

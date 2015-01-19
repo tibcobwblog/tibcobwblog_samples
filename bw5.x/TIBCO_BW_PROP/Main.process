@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pd:ProcessDefinition xmlns:pd="http://xmlns.tibco.com/bw/process/2003" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <pd:name>Main.process</pd:name>
+    <pd:startName>Start</pd:startName>
+    <pd:startX>120</pd:startX>
+    <pd:startY>58</pd:startY>
+    <pd:returnBindings>
+        <root>
+            <param>
+                <xsl:value-of select="$Java-Code/javaCodeActivityOutput/myVar"/>
+            </param>
+        </root>
+    </pd:returnBindings>
+    <pd:endName>End</pd:endName>
+    <pd:endType>
+        <xsd:element name="root">
+            <xsd:complexType>
+                <xsd:sequence>
+                    <xsd:element name="param" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+        </xsd:element>
+    </pd:endType>
+    <pd:endX>440</pd:endX>
+    <pd:endY>58</pd:endY>
+    <pd:errorSchemas/>
+    <pd:processVariables/>
+    <pd:targetNamespace>http://xmlns.example.com/1358806686000</pd:targetNamespace>
+    <pd:activity name="Java Code">
+        <pd:type>com.tibco.plugin.java.JavaActivity</pd:type>
+        <pd:resourceType>ae.javapalette.javaActivity</pd:resourceType>
+        <pd:x>291</pd:x>
+        <pd:y>58</pd:y>
+        <config>
+            <fileName>MainJavaCode</fileName>
+            <packageName>Main</packageName>
+            <fullsource>package Main;
+import java.util.*;
+import java.io.*;
+public class MainJavaCode{
+/****** START SET/GET METHOD, DO NOT MODIFY *****/
+	protected String myVar = "";
+	public String getmyVar() {
+		return myVar;
+	}
+	public void setmyVar(String val) {
+		myVar = val;
+	}
+/****** END SET/GET METHOD, DO NOT MODIFY *****/
+	public MainJavaCode() {
+	}
+	public void invoke() throws Exception {
+/* Available Variables: DO NOT MODIFY
+	Out : String myVar
+* Available Variables: DO NOT MODIFY *****/
+myVar = com.tibco.pe.plugin.PluginProperties.getProperty("tibco.clientVar.myVar");
+
+}
+}
+</fullsource>
+            <outputData>
+                <row>
+                    <fieldName>myVar</fieldName>
+                    <fieldType>string</fieldType>
+                    <fieldRequired>optional</fieldRequired>
+                </row>
+            </outputData>
+            <byteCode>
+                <class>
+                    <name>MainJavaCode</name>
+                    <byteCode>yv66vgAAADIAIwkABgAXCgAHABgIABkIABoKABsAHAcAHQcAHgEABW15VmFyAQASTGphdmEvbGFuZy9TdHJpbmc7AQAIZ2V0bXlWYXIBABQoKUxqYXZhL2xhbmcvU3RyaW5nOwEABENvZGUBAA9MaW5lTnVtYmVyVGFibGUBAAhzZXRteVZhcgEAFShMamF2YS9sYW5nL1N0cmluZzspVgEABjxpbml0PgEAAygpVgEABmludm9rZQEACkV4Y2VwdGlvbnMHAB8BAApTb3VyY2VGaWxlAQARTWFpbkphdmFDb2RlLmphdmEMAAgACQwAEAARAQAAAQAVdGliY28uY2xpZW50VmFyLm15VmFyBwAgDAAhACIBABFNYWluL01haW5KYXZhQ29kZQEAEGphdmEvbGFuZy9PYmplY3QBABNqYXZhL2xhbmcvRXhjZXB0aW9uAQAkY29tL3RpYmNvL3BlL3BsdWdpbi9QbHVnaW5Qcm9wZXJ0aWVzAQALZ2V0UHJvcGVydHkBACYoTGphdmEvbGFuZy9TdHJpbmc7KUxqYXZhL2xhbmcvU3RyaW5nOwAhAAYABwAAAAEABAAIAAkAAAAEAAEACgALAAEADAAAAB0AAQABAAAABSq0AAGwAAAAAQANAAAABgABAAAACAABAA4ADwABAAwAAAAiAAIAAgAAAAYqK7UAAbEAAAABAA0AAAAKAAIAAAALAAUADAABABAAEQABAAwAAAArAAIAAQAAAAsqtwACKhIDtQABsQAAAAEADQAAAA4AAwAAAA4ABAAGAAoADwABABIAEQACAAwAAAAmAAIAAQAAAAoqEgS4AAW1AAGxAAAAAQANAAAACgACAAAAFAAJABYAEwAAAAQAAQAUAAEAFQAAAAIAFg==</byteCode>
+                </class>
+            </byteCode>
+        </config>
+        <pd:inputBindings/>
+    </pd:activity>
+    <pd:transition>
+        <pd:from>Start</pd:from>
+        <pd:to>Java Code</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>Java Code</pd:from>
+        <pd:to>End</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+</pd:ProcessDefinition>

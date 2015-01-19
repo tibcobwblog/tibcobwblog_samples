@@ -1,0 +1,45 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<repository xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xmlns = "http://www.tibco.com/xmlns/repo/types/2002">
+	<globalVariables>
+		<globalVariable>
+			<name>GetAccountDetails</name>
+			<value>INF502</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1418293558960</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>GetStatementPage</name>
+			<value>INF501</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1418293559004</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>PDFStatement</name>
+			<value>INF503</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1418293559047</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>Service</name>
+			<value>INF000</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1418293559092</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>TokenService</name>
+			<value>INF504</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1418293559136</modTime>
+		</globalVariable>
+	</globalVariables>
+</repository>

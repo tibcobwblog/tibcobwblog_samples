@@ -1,0 +1,29 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<repository xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xmlns = "http://www.tibco.com/xmlns/repo/types/2002">
+	<globalVariables>
+		<globalVariable>
+			<name>ExceptionQueue</name>
+			<value>GIS.EMS.CLE.Exception</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1418293560508</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>LogLevelReply</name>
+			<value>GIS.EMS.CLE.LogLevelReply</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1418293560562</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>LogQueue</name>
+			<value>GIS.EMS.CLE.Log</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1418293560615</modTime>
+		</globalVariable>
+	</globalVariables>
+</repository>

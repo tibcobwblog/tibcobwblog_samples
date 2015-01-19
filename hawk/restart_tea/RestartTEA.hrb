@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ruleBase>
+	<version>5.1.1</version>
+	<name><![CDATA[RestartTEA]]></name>
+	<schedule></schedule>
+	<author>alexa on host ALARICO-K55VM(192.168.79.1) at 00:17 Wed, Dec 24, 2014</author>
+	<lastModification>alexa on host ALARICO-K55VM(192.168.79.1) at 00:29 Wed, Dec 24, 2014</lastModification>
+	<comment><![CDATA[]]></comment>
+	<rule>
+		<name><![CDATA[COM.TIBCO.hawk.hma.Process:getProcess(Process Name=tea.exe):60]]></name>
+		<schedule></schedule>
+		<overRuling>0</overRuling>
+		<dataSource>
+			<microAgentName><![CDATA[COM.TIBCO.hawk.hma.Process]]></microAgentName>
+			<methodName>getProcess</methodName>
+			<dataElement name="Process Name">
+				<dataObject class="java.lang.String" ><![CDATA[tea.exe]]></dataObject>
+			</dataElement>
+			<interval>60000</interval>
+		</dataSource>
+		<test>
+			<name><![CDATA[(Process Name !Equals tea.exe)]]></name>
+			<schedule></schedule>
+			<operator class="COM.TIBCO.hawk.config.rbengine.rulebase.operators.NotEqualsObject" >
+				<operator class="COM.TIBCO.hawk.config.rbengine.rulebase.operators.RuleData" >
+					<dataObject class="java.lang.String" ><![CDATA[Process Name]]></dataObject>
+				</operator>
+				<dataObject class="java.lang.String" ><![CDATA[tea.exe]]></dataObject>
+			</operator>
+			<consequenceAction>
+				<name><![CDATA[sendAlertHigh(alertMsg=TEA was down!! We need to restarting it!!!)]]></name>
+				<schedule></schedule>
+				<microAgentName>COM.TIBCO.hawk.microagent.RuleBaseEngine</microAgentName>
+				<methodName>sendAlertMessage</methodName>
+				<dataElement name="message">
+					<dataObject class="COM.TIBCO.hawk.config.rbengine.rulebase.util.AlertHigh" ><![CDATA[TEA was down!! We need to restarting it!!!]]></dataObject>
+				</dataElement>
+				<properties>
+				</properties>
+				<performOnceOnly/>
+				<escalationTime>0</escalationTime>
+			</consequenceAction>
+			<consequenceAction>
+				<name><![CDATA[execute(command=C:\tibco_tea\tea\2.1\bin\tea.exe )]]></name>
+				<schedule></schedule>
+				<microAgentName>COM.TIBCO.hawk.microagent.Custom</microAgentName>
+				<methodName>execute</methodName>
+				<dataElement name="command">
+					<dataObject class="java.lang.String" ><![CDATA[C:\tibco_tea\tea\2.1\bin\tea.exe ]]></dataObject>
+				</dataElement>
+				<properties>
+				</properties>
+				<performOnceOnly/>
+				<escalationTime>0</escalationTime>
+			</consequenceAction>
+			<consequenceAction>
+				<name><![CDATA[sendNotification(alertMsg=Restarting the TEA)]]></name>
+				<schedule></schedule>
+				<microAgentName>COM.TIBCO.hawk.microagent.RuleBaseEngine</microAgentName>
+				<methodName>sendAlertMessage</methodName>
+				<dataElement name="message">
+					<dataObject class="COM.TIBCO.hawk.config.rbengine.rulebase.util.Notification" ><![CDATA[Restarting the TEA]]></dataObject>
+				</dataElement>
+				<properties>
+				</properties>
+				<performOnceOnly/>
+				<escalationTime>0</escalationTime>
+			</consequenceAction>
+			<trueConditionPolicy>
+				<trueCountThreshold>1</trueCountThreshold>
+			</trueConditionPolicy>
+			<clearOn>
+				<clearOnFirstFalse/>
+			</clearOn>
+		</test>
+	</rule>
+</ruleBase>

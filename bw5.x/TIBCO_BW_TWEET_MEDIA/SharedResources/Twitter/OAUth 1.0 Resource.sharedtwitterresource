@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BWSharedResource>
+    <name>OAUth 1.0 Resource</name>
+    <resourceType>twitter.sharedresource.TwitterOAuthSharedResource</resourceType>
+    <config>
+        <consumerKey>#!/E/c+4uwMfcTGprnM6MiJRFfb7R7pnXTQ5qx0QfbWLM2yiHTtzWZYf2BvUTFHan2O0QBdCdsUBePlJusfmuRqg==</consumerKey>
+        <consumerSecret>#!WIzhY7/i3mIZKvNte60gp/4qyQizgOnRzC2LvLMP7ZU7KT1eW1y9NQz9OojNlOWy1x3Qv5NH821xFio/gYXERHhtidcmhS2Ee/3xHZcyTWQDa33qKloHgxdtIOh9dNGIh+W0U73D67gvVl61/KVxmw==</consumerSecret>
+        <accessToken>#!LyumhFd4rFBLmv4EtLsKrUPlpYAromOuiczoJTCnQxFO3CEnJ4eLozqWLUGRZH7r134Qsz9KR5g6SuDUMPV3pqgCgmMspXktQB3zRntmt6mfY6RyZCXrIgnfkSTs24mKZnU2hp3UYxvh8ZyppfVSYw==</accessToken>
+        <accessTokenSecret>#!fPqzTy6+hbA0IDV4uVT+vqE/uaDWmeZKnlYJSyKIQZdXZFrtVBlQ4jcdnOg0i602OyR0SMUd/6Ss1loCC1wVDaxr5cKfKugalpZmefe4Eqs6K/zC68x8NumzZAU9w7oG70oSsNl18a4=</accessTokenSecret>
+    </config>
+</BWSharedResource>

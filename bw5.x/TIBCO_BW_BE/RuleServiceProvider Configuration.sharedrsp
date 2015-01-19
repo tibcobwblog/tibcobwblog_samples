@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BWSharedResource>
+    <name>RuleServiceProvider Configuration</name>
+    <resourceType>ae.sharedresource.BERuleServiceProvider</resourceType>
+    <config>
+        <repourl>C:\Documents and Settings\Administrator\Desktop\Test1.ear</repourl>
+        <cdd>C:\Documents and Settings\Administrator\Desktop\Test1\Test1\Deployments\Deployments.cdd</cdd>
+        <puid>default</puid>
+    </config>
+</BWSharedResource>

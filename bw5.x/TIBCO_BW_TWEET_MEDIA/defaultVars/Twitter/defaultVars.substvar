@@ -1,0 +1,37 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<repository xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xmlns = "http://www.tibco.com/xmlns/repo/types/2002">
+	<globalVariables>
+		<globalVariable>
+			<name>accessToken</name>
+			<value>2894909697-lEcJkDj2abplxgZh3vLo9ZmeygLZPame6A89dyL</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1418813434983</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>accessTokenSecret</name>
+			<value>DLUa7QXanyX5wxe6L5hxCxveThAd1gL2Id4oe6FnzocW1</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1418641777985</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>consumerKey</name>
+			<value>oJFOmo4i5q8nYvNkxuVMzghtt</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1418805663789</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>consumerSecret</name>
+			<value>k9vypfTyKiCGJj8L5V2zZdju3yFYY6qLCRbIB4gOFnVgIOm26D</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1418805663879</modTime>
+		</globalVariable>
+	</globalVariables>
+</repository>

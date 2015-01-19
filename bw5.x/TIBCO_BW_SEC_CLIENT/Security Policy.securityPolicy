@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BWSharedResource>
+    <name>Security Policy</name>
+    <resourceType>ws.security.policy.resource</resourceType>
+    <config>
+        <requiresAuthentication>true</requiresAuthentication>
+        <requiresConfidentiatlity>false</requiresConfidentiatlity>
+        <requiresIntegrity>false</requiresIntegrity>
+        <requiresMessageAge>true</requiresMessageAge>
+        <requiresCustomPassword>false</requiresCustomPassword>
+        <PolicyType>outbound</PolicyType>
+        <authentication>
+            <securityTokenType>UserNameToken</securityTokenType>
+            <passwordType>Text</passwordType>
+            <usernamePasswordIdentity>/Identity.id</usernamePasswordIdentity>
+        </authentication>
+        <integrity>
+            <digestAlgorithm>SHA1</digestAlgorithm>
+            <securityTokenType>X509Token</securityTokenType>
+            <passwordType>Text</passwordType>
+        </integrity>
+        <confidentiality>
+            <encryptionAlgorithm>3DES</encryptionAlgorithm>
+            <receiverPrivateKeyIdentifierType>X509Token</receiverPrivateKeyIdentifierType>
+        </confidentiality>
+        <integrity-securityTokenTypes>
+            <element value="UserNameToken" isSelected="true"/>
+            <element value="X509Token" isSelected="true"/>
+        </integrity-securityTokenTypes>
+        <integrity-digestAlgorithms>
+            <element value="SHA1" isSelected="true"/>
+            <element value="MD5" isSelected="true"/>
+        </integrity-digestAlgorithms>
+        <confidentiality-encryptionAlgorithms>
+            <element value="3DES" isSelected="true"/>
+            <element value="AES-128" isSelected="true"/>
+            <element value="AES-256" isSelected="true"/>
+        </confidentiality-encryptionAlgorithms>
+        <authentication-securityTokenTypes>
+            <element value="UserNameToken" isSelected="true"/>
+            <element value="X509Token" isSelected="false"/>
+        </authentication-securityTokenTypes>
+        <timeout>
+            <expiresIn>20000</expiresIn>
+        </timeout>
+    </config>
+</BWSharedResource>

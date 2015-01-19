@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BWSharedResource xmlns:inLine="http://xmlns.example.com/1363290940906">
+    <name>Security Policy Association</name>
+    <resourceType>ws.security.policy.association.resource</resourceType>
+    <config>
+        <inboundMessagePolicy>/SharedResources/Security Policy.securityPolicy</inboundMessagePolicy>
+        <applyTo>/Processes/globalweather-service0/GlobalWeatherSoapEndpoint0/GetWeather</applyTo>
+        <systemSecuritySubject>/Processes/globalweather-service0/GlobalWeatherSoapEndpoint0/GetWeather</systemSecuritySubject>
+        <inbound>
+            <selectSignatureParts/>
+            <selectEncryptionParts/>
+        </inbound>
+    </config>
+</BWSharedResource>

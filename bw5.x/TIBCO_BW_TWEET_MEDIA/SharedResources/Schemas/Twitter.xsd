@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="media" type="media_T"/>
+	<xs:complexType name="media_T">
+		<xs:sequence>
+			<xs:element name="media_id" type="xs:string" minOccurs="0"/>
+			<xs:element name="media_id_string" type="xs:string" minOccurs="0"/>
+			<xs:element name="size" type="xs:string" minOccurs="0"/>
+			<xs:element name="image" type="image_T" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="image_T">
+		<xs:sequence>
+			<xs:element name="w" type="xs:string" minOccurs="0"/>
+			<xs:element name="h" type="xs:string" minOccurs="0"/>
+			<xs:element name="image_type" type="xs:string" minOccurs="0"/>
+			<xs:element name="image" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

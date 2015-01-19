@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Created by TIBCO WSDL-->
+<wsdl:definitions xmlns:tns="http://www.webserviceX.NET/GetWeatherImpl/Processes" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns0="http://www.webserviceX.NET" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap12/" name="Untitled" targetNamespace="http://www.webserviceX.NET/GetWeatherImpl/Processes">
+    <wsdl:types>
+        <xs:schema targetNamespace="http://www.webserviceX.NET" elementFormDefault="qualified" attributeFormDefault="unqualified">
+            <xs:element name="GetCitiesByCountry">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="CountryName" type="xs:string" minOccurs="0"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="GetCitiesByCountryResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="GetCitiesByCountryResult" type="xs:string" minOccurs="0"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="GetWeather">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="CityName" type="xs:string" minOccurs="0"/>
+                        <xs:element name="CountryName" type="xs:string" minOccurs="0"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="GetWeatherResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="GetWeatherResult" type="xs:string" minOccurs="0"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="string" nillable="true" type="xs:string"/>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:service name="Test">
+        <wsdl:port name="SOAPEventSource" binding="tns:SOAPEventSourceBinding">
+            <soap:address location="http://localhost:9999/Processes/Test"/>
+        </wsdl:port>
+    </wsdl:service>
+    <wsdl:portType name="GlobalWeatherHttpGet">
+        <wsdl:operation name="GetWeather">
+            <wsdl:documentation>Get weather report for all major cities around the world.</wsdl:documentation>
+            <wsdl:input message="tns:GetWeatherHttpGetIn"/>
+            <wsdl:output message="tns:GetWeatherHttpGetOut"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="SOAPEventSourceBinding" type="tns:GlobalWeatherHttpGet">
+        <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="GetWeather">
+            <wsdl:documentation>Get weather report for all major cities around the world.</wsdl:documentation>
+            <soap:operation style="rpc" soapAction="/Processes/Test" soapActionRequired="true"/>
+            <wsdl:input>
+                <soap:body use="literal" namespace="http://InputMessageNamespace" parts="CityName CountryName"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" namespace="http://OutputMessageNamespace" parts="Body"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:message name="GetWeatherHttpGetIn">
+        <wsdl:part name="CityName" type="xs:string"/>
+        <wsdl:part name="CountryName" type="xs:string"/>
+    </wsdl:message>
+    <wsdl:message name="GetWeatherHttpGetOut">
+        <wsdl:part name="Body" element="ns0:string"/>
+    </wsdl:message>
+</wsdl:definitions>

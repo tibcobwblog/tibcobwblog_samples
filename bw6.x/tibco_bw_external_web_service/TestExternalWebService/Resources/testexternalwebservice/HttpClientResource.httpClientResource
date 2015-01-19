@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:http="http://xsd.tns.tibco.com/bw/models/sharedresource/httpclient" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_lrWpcV-zEeSmdNEgUulFaQ" name="testexternalwebservice.HttpClientResource" type="http:HttpClientConfiguration">
+  <jndi:configuration xsi:type="http:HttpClientConfiguration" xmi:id="_lraT0F-zEeSmdNEgUulFaQ" maxTotalConnections="200" maxTotalConnectionsPerHost="20" httpClientVersion="commons" retryCount="3">
+    <tcpDetails xmi:id="_lrd-MF-zEeSmdNEgUulFaQ" connectionTimeout="3000"/>
+  </jndi:configuration>
+</jndi:namedResource>

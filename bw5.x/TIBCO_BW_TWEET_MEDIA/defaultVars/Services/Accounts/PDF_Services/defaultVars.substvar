@@ -1,0 +1,45 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<repository xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xmlns = "http://www.tibco.com/xmlns/repo/types/2002">
+	<globalVariables>
+		<globalVariable>
+			<name>Base_URL</name>
+			<value>http://localhost:9701/esbapi</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1418293562725</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>EP_URL</name>
+			<value>http://10.10.9.71:8099/EservicesBillWebservice/Service.asmx</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1418293562780</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>Host</name>
+			<value>localhost</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1418293562833</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>Port</name>
+			<value>9701</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1418293562885</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>Version</name>
+			<value>V1</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1418293562936</modTime>
+		</globalVariable>
+	</globalVariables>
+</repository>

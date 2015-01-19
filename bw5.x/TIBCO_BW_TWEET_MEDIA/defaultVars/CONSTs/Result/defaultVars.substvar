@@ -1,0 +1,29 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<repository xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xmlns = "http://www.tibco.com/xmlns/repo/types/2002">
+	<globalVariables>
+		<globalVariable>
+			<name>NO_DATA_FOUND</name>
+			<value>NO_DATA_FOUND</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1418293390570</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>OK</name>
+			<value>OK</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1418293559984</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>Success</name>
+			<value>Success</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1418293390535</modTime>
+		</globalVariable>
+	</globalVariables>
+</repository>

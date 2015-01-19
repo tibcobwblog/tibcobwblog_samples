@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:axis2="http://xsd.tns.tibco.com/bw/models/binding/soap/axis2" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmlns:wsdl_1404752788643="http://www.example.org/wsdl/1404752788643" xmi:id="_9xZ1cAX4EeS5NoimOAijDg" targetNamespace="http://tns.tibco.com/bw/composite/TestInvokeJava.module" name="TestInvokeJava.module" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_DfhO0AX5EeS5NoimOAijDg" name="Process" promote="ComponentProcess/Process">
+    <sca:interface.wsdl xmi:id="_Dfn8gAX5EeS5NoimOAijDg" interface="http://www.example.org/wsdl/1404752788643#wsdl.interface(Process)" scaext:wsdlLocation="../Service%20Descriptors/Process.wsdl"/>
+    <scaext:binding xsi:type="axis2:SOAPServiceBinding" xmi:id="_rdY2EAX5EeS5NoimOAijDg" name="SOAPServiceBinding" targetNamespace="http://www.tibco.com/4344dfecce684e5da0c5e9d24cee140f/SOAPServiceBinding" portTypeQName="wsdl_1404752788643:Process" transportBindingType="HTTP" attachmentStyle="SwA" modelVersion="1.1.0">
+      <bindingType xmi:id="_rdj1MAX5EeS5NoimOAijDg"/>
+      <inboundConfiguration xsi:type="axis2:HttpTransportConfiguration" xmi:id="_snVgsAX5EeS5NoimOAijDg" endpointURI="/SOAPServiceBinding/process/" httpConnector="testinvokejava.module.HTTPConnectorResource"/>
+      <operationConfiguration xmi:id="_rdmRcAX5EeS5NoimOAijDg" operationName="operation" action="operation" actionNeeded="true">
+        <bindingType xmi:id="_rdmRcQX5EeS5NoimOAijDg"/>
+        <messageConfiguration xmi:id="_rdmRcgX5EeS5NoimOAijDg" messageQName="wsdl_1404752788643:operationRequest">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_rdm4gAX5EeS5NoimOAijDg" partName="parameters"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_rdm4gQX5EeS5NoimOAijDg" messageQName="wsdl_1404752788643:operationResponse" messageDirection="OUTPUT">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_rdm4ggX5EeS5NoimOAijDg" partName="parameters"/>
+        </messageConfiguration>
+        <context xmi:id="_rdm4gwX5EeS5NoimOAijDg">
+          <inputMapping xmi:id="_rdoGoAX5EeS5NoimOAijDg"/>
+          <outputMapping xmi:id="_rdoGoQX5EeS5NoimOAijDg" direction="OUTPUT"/>
+        </context>
+      </operationConfiguration>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_rdoGogX5EeS5NoimOAijDg" bindingName="SOAPServiceBinding"/>
+  </sca:service>
+  <sca:component xmi:id="_-RrQ8AX4EeS5NoimOAijDg" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_-Rr4AAX4EeS5NoimOAijDg" processName="testinvokejava.module.Process"/>
+    <sca:service xmi:id="_DfcWUAX5EeS5NoimOAijDg" name="Process">
+      <sca:interface.wsdl xmi:id="_DfdkcAX5EeS5NoimOAijDg" interface="http://www.example.org/wsdl/1404752788643#wsdl.interface(Process)" scaext:wsdlLocation="../Service%20Descriptors/Process.wsdl"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>

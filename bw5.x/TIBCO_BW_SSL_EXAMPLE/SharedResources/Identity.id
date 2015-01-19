@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Repository:repository xmlns:Repository="http://www.tibco.com/xmlns/repo/types/2002">
+    <identity>
+        <objectType>url</objectType>
+        <name>Identity</name>
+        <designer/>
+        <username>tibco</username>
+        <password>#!db+0f5OoK+gaJHjmyPQLvhHhI+/7I8rv</password>
+        <certUrl>file://C:/Documents and Settings/Administrator/Desktop/domain.tld.crt</certUrl>
+        <privateKeyUrl>file://C:/Documents and Settings/Administrator/Desktop/domain.tld.key</privateKeyUrl>
+        <passPhrase>#!19ws9WSoCKhRzSr+3L5zJRSyZlMC5/fMZg9jGdu0IKU=</passPhrase>
+        <url>file://C:/Documents and Settings/Administrator/Desktop/wso2carbon.jks</url>
+        <fileType>JKS</fileType>
+    </identity>
+</Repository:repository>

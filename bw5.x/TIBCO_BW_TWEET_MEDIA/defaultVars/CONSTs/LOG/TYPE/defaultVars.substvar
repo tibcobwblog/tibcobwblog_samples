@@ -1,0 +1,37 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<repository xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xmlns = "http://www.tibco.com/xmlns/repo/types/2002">
+	<globalVariables>
+		<globalVariable>
+			<name>LOG_DEBUG</name>
+			<value>LOG DEBUG</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1418293559790</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>LOG_END_ERROR</name>
+			<value>LOG_END_ERROR</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1418293559838</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>LOG_END_INFO</name>
+			<value>LOG_END_INFO</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1418293559887</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>LOG_START_INFO</name>
+			<value>LOG_START_INFO</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1418293559934</modTime>
+		</globalVariable>
+	</globalVariables>
+</repository>

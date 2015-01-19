@@ -1,0 +1,37 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<repository xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xmlns = "http://www.tibco.com/xmlns/repo/types/2002">
+	<globalVariables>
+		<globalVariable>
+			<name>JDBC_URL</name>
+			<value>jdbc:sqlserver://10.0.0.173:1433;databaseName=ICSMOEM</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1417774252918</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>Max_Connections</name>
+			<value>10</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1417774253158</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>Password</name>
+			<value>#!KR28ZSs0+f7b0mFqBk/3nSq9iCqhnpj4RiaW8tVT2+Q=</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>Password</type>
+			<modTime>1417774252809</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>Username</name>
+			<value>sa</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1417774253043</modTime>
+		</globalVariable>
+	</globalVariables>
+</repository>

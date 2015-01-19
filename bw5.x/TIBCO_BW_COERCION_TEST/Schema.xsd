@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://www.tibco.com/schemas/TIBCO_BW_COERCION_TEST/Schema.xsd"
+	 targetNamespace="http://www.tibco.com/schemas/TIBCO_BW_COERCION_TEST/Schema.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="root">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="test1" type="xs:string"/>
+				<xs:element name="test2" type="xs:string"/>
+				<xs:element name="test3" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

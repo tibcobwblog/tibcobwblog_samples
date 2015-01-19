@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BWSharedResource>
+    <name>OAuth1.0</name>
+    <resourceType>ae.shared.RestSharedResource</resourceType>
+    <config>
+        <oauth1ConsumerKeyUI>#!HXVlEjJXmDeVNuT1/c7S9jQVo0UDzY6XbvCGK/+AMzJ3XN+bd3ZmLYpx5lqc0P+LS8tLirPaW/ICFugbDiAdHQ==</oauth1ConsumerKeyUI>
+        <oauth1ConsumerSecretUI>#!UWv6vfI0FUR8/mHZ4NMQK8fO1rdobLbHhLiuY7rSCLm+YqR9EU2bzb3JbQm01IOv3WC+COAzsiONPlUbKbB9tUk9asgm02hSsbxapgRAaI5iUtC++UiPrki6miIk4mUYthk1Etkp3dNrMsGSp26T9A==</oauth1ConsumerSecretUI>
+        <oauth1AccessTokenUI>#!nOQux3avCjClQluwR2wR+20kQ/CCyOS8e3ygqI3bjXxdxTv42JHeIFpNOio0yHPQQjmVa6yK123Q7kOpsPr4zuhLmS3Fmg7znpb7IdZkiFxXSeyxtb7rCHZiyqTvwIQEpWcVf5bxp4kEzlNNWGIkUw==</oauth1AccessTokenUI>
+        <oauth1AccessTokenSecretUI>#!B3xVqSS7OMHZAZ543f1QoC0QnfQheJplQCqw3+lXGiHZl7f7N9yWrHxpGe6xvkMFDRpH8pC7tD1YdgWMO1aF3uuxjs5k7Uz2Yx5G6nf7ndxM3sBlZPnkNDv0+EXeJoVTGeZEUgHBQGc=</oauth1AccessTokenSecretUI>
+        <oauth1SignMethodUI>HMAC-SHA1</oauth1SignMethodUI>
+    </config>
+</BWSharedResource>

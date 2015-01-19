@@ -1,0 +1,29 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<repository xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xmlns = "http://www.tibco.com/xmlns/repo/types/2002">
+	<globalVariables>
+		<globalVariable>
+			<name>DEBUG</name>
+			<value>3</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>Integer</type>
+			<modTime>1418293559647</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>ERROR</name>
+			<value>0</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>Integer</type>
+			<modTime>1418293559695</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>INFO</name>
+			<value>2</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>Integer</type>
+			<modTime>1418293559743</modTime>
+		</globalVariable>
+	</globalVariables>
+</repository>
