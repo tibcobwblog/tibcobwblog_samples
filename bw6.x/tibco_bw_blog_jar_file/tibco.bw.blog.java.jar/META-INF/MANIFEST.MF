@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Tibco Bw Blog Java Jar Module
+Bundle-SymbolicName: tibco.bw.blog.java.jar
+Bundle-Version: 1.0.0.qualifier
+Bundle-ClassPath: lib/tibcobwblog_test_jar-1.0.jar,
+ .
+Bundle-Vendor: TIBCO Software Inc.
+Export-Package: com.tibcobwblog.test.jar
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+TIBCO-BW-Version: 6.2.0 V25 2014-10-31
+TIBCO-BW-ApplicationModule: META-INF/module.bwm
+Require-Capability: com.tibco.bw.model; filter:="(name=bwext)",
+ com.tibco.bw.palette; filter:="(name=bw.generalactivities)",
+ com.tibco.bw.palette; filter:="(name=bw.java)"
+TIBCO-BW-ConfigProfile: META-INF/default.substvar
+TIBCO-BW-ModuleSharedVariables: META-INF/module.msv
+TIBCO-BW-JobSharedVariables: META-INF/module.jsv
