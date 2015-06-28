@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions" xmlns:tns="http://www.tibco.com/namespaces/tnt/plugins/generalactivities/mapper/1434828913420" targetNamespace="http://www.tibco.com/namespaces/tnt/plugins/generalactivities/mapper/1434828913420">
+  <complexType name="MapperInputType">
+    <sequence>
+      <element name="elements">
+        <complexType>
+          <sequence>
+            <element name="primitive" type="string"/>
+          </sequence>
+        </complexType>
+      </element>
+    </sequence>
+  </complexType>
+  <element name="MapperInput" tibex:source="bw.generalactivities.mapper" type="tns:MapperInputType"/>
+</schema>
