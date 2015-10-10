@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pd:ProcessDefinition xmlns:pd="http://xmlns.tibco.com/bw/process/2003" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <pd:name>FibonacciIterative.process</pd:name>
+    <pd:startName>Start</pd:startName>
+    <pd:startType>
+        <xsd:element name="root">
+            <xsd:complexType>
+                <xsd:sequence>
+                    <xsd:element name="number" type="xsd:int"/>
+                </xsd:sequence>
+            </xsd:complexType>
+        </xsd:element>
+    </pd:startType>
+    <pd:startX>148</pd:startX>
+    <pd:startY>64</pd:startY>
+    <pd:returnBindings/>
+    <pd:endName>End</pd:endName>
+    <pd:endX>450</pd:endX>
+    <pd:endY>64</pd:endY>
+    <pd:errorSchemas/>
+    <pd:processVariables/>
+    <pd:targetNamespace>http://xmlns.example.com/1444248507187</pd:targetNamespace>
+    <pd:activity name="Java Code">
+        <pd:type>com.tibco.plugin.java.JavaActivity</pd:type>
+        <pd:resourceType>ae.javapalette.javaActivity</pd:resourceType>
+        <pd:x>288</pd:x>
+        <pd:y>63</pd:y>
+        <config>
+            <fileName>FibonacciIterativeJavaCode</fileName>
+            <packageName>FibonacciIterative</packageName>
+            <fullsource>package FibonacciIterative;
+import java.util.*;
+import java.io.*;
+public class FibonacciIterativeJavaCode{
+/****** START SET/GET METHOD, DO NOT MODIFY *****/
+	protected int in_var_1 = 0;
+	protected int out_var_1 = 0;
+	public int getin_var_1() {
+		return in_var_1;
+	}
+	public void setin_var_1(int val) {
+		in_var_1 = val;
+	}
+	public int getout_var_1() {
+		return out_var_1;
+	}
+	public void setout_var_1(int val) {
+		out_var_1 = val;
+	}
+/****** END SET/GET METHOD, DO NOT MODIFY *****/
+	public FibonacciIterativeJavaCode() {
+	}
+	public void invoke() throws Exception {
+/* Available Variables: DO NOT MODIFY
+	In  : int in_var_1
+	Out : int out_var_1
+* Available Variables: DO NOT MODIFY *****/
+
+int i = 0;
+int j = 1;	
+for (int k = 1; k &lt; in_var_1; k++)
+				  {	
+					int t;
+					t = i + j;
+					i = j;
+					j = t;
+				  }
+
+out_var_1=j;}
+}
+</fullsource>
+            <inputData>
+                <row>
+                    <fieldName>in_var_1</fieldName>
+                    <fieldType>int</fieldType>
+                    <fieldRequired>optional</fieldRequired>
+                </row>
+            </inputData>
+            <outputData>
+                <row>
+                    <fieldName>out_var_1</fieldName>
+                    <fieldType>int</fieldType>
+                    <fieldRequired>optional</fieldRequired>
+                </row>
+            </outputData>
+            <byteCode/>
+        </config>
+        <pd:inputBindings>
+            <javaCodeActivityInput>
+                <in_var_1>
+                    <xsl:value-of select="$Start/root/number"/>
+                </in_var_1>
+            </javaCodeActivityInput>
+        </pd:inputBindings>
+    </pd:activity>
+    <pd:transition>
+        <pd:from>Start</pd:from>
+        <pd:to>Java Code</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>Java Code</pd:from>
+        <pd:to>End</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+</pd:ProcessDefinition>
