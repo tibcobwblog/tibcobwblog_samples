@@ -1,0 +1,8 @@
+ems:
+  build: .
+  ports:
+   - "7222:7222"
+   - "2222:22"
+  hostname: tibco-ems
+  volumes: 
+   - ./data:/home/user/tibco/tibco/cfgmgmt/ems/data

@@ -1,0 +1,7 @@
+EMSUserAuthentication {
+    com.tibco.tibems.tibemsd.security.jaas.LDAPSimpleAuthentication required
+    debug="true"
+    tibems.ldap.user_pattern="CN=%u"
+    tibems.ldap.url="ldap://localhost:389" ;
+};
+
