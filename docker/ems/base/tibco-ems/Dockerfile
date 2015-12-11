@@ -1,7 +1,8 @@
 FROM tutum/centos
 
 # Dont forget to ./warehouse.py /dir/to/installers
-ENV warehouse_host http://localhost:18000
+# 172.17.0.1 is my host address.  I don't know of a nice way of autodetecting this :(
+ENV warehouse_host http://172.17.0.1:18000
 
 RUN useradd -ms /bin/bash tibco
 ENV HOME /home/node
@@ -12,7 +13,7 @@ RUN mkdir -p /tmp/software && \
     cd /tmp/software && \
     wget --quiet $warehouse_host/jdk-7u79-linux-x64.rpm && \
     rpm -Uvh jdk-7u79-linux-x64.rpm && \
-    alternatives --install /usr/bin/java java /usr/java/latest/bin/java 2 && \
+    rm -rf /tmp/software
 
 RUN mkdir -p /tmp/software && \
     cd /tmp/software && \
@@ -28,7 +29,6 @@ EXPOSE 7222
 COPY files/ems.sh /opt/tibco/ems/
 
 RUN chmod +x /opt/tibco/ems/ems.sh && \
-    chown -R tibco:tibco /tmp/software/ && \
     chown -R tibco:tibco /opt/tibco/ && \
     chown -R tibco:tibco /home/user/tibco/
 
@@ -36,4 +36,3 @@ VOLUME /home/user/tibco/tibco/cfgmgmt/ems/data:rw
 
 USER tibco
 CMD /opt/tibco/ems/ems.sh
-##CMD /run.sh
