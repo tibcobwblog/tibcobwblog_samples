@@ -1,27 +1,36 @@
 FROM tutum/centos
-COPY files/TIB_ems_8.2.1_linux_x86.zip /tmp/
-COPY files/jdk-7u75-linux-x64.rpm /tmp/
+
+# Dont forget to ./warehouse.py /dir/to/installers
+ENV warehouse_host http://localhost:18000
 
 RUN useradd -ms /bin/bash tibco
 ENV HOME /home/node
-RUN rpm -Uvh /tmp/jdk-7u75-linux-x64.rpm
-RUN alternatives --install /usr/bin/java java /usr/java/latest/bin/java 2
-RUN yum -y  install unzip
 
+RUN yum -y install unzip wget
 
-RUN mkdir /tmp/software/
-RUN mv /tmp/TIB_ems_8.2.1_linux_x86.zip /tmp/software/
+RUN mkdir -p /tmp/software && \
+    cd /tmp/software && \
+    wget --quiet $warehouse_host/jdk-7u79-linux-x64.rpm && \
+    rpm -Uvh jdk-7u79-linux-x64.rpm && \
+    alternatives --install /usr/bin/java java /usr/java/latest/bin/java 2 && \
 
-RUN unzip /tmp/software/TIB_ems_8.2.1_linux_x86.zip -d /tmp/software/
-RUN /tmp/software/TIBCOUniversalInstaller-lnx-x86.bin -silent
+RUN mkdir -p /tmp/software && \
+    cd /tmp/software && \
+    wget --quiet $warehouse_host/TIB_ems_8.2.1_linux_x86.zip && \
+    unzip TIB_ems_8.2.1_linux_x86.zip -d ems && \
+    cd ems && \
+    ./TIBCOUniversalInstaller-lnx-x86.bin -silent && \
+    cd / && \
+    rm -rf /tmp/software
 
 EXPOSE 7222
 
 COPY files/ems.sh /opt/tibco/ems/
-RUN chmod +x /opt/tibco/ems/ems.sh
-RUN chown -R tibco:tibco /tmp/software/
-RUN chown -R tibco:tibco /opt/tibco/
-RUN chown -R tibco:tibco /home/user/tibco/
+
+RUN chmod +x /opt/tibco/ems/ems.sh && \
+    chown -R tibco:tibco /tmp/software/ && \
+    chown -R tibco:tibco /opt/tibco/ && \
+    chown -R tibco:tibco /home/user/tibco/
 
 VOLUME /home/user/tibco/tibco/cfgmgmt/ems/data:rw
 
