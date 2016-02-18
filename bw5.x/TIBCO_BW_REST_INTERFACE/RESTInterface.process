@@ -44,7 +44,7 @@
     <pd:activity name="REST Dispatch and Reply">
         <pd:type>com.tibco.plugin.json.rest.server.activities.RestAdapterActivity</pd:type>
         <pd:resourceType>rest.activities.RestAdapter</pd:resourceType>
-        <pd:x>261</pd:x>
+        <pd:x>260</pd:x>
         <pd:y>63</pd:y>
         <config>
             <eventSource>HTTP Receiver</eventSource>
@@ -78,13 +78,18 @@
                                             </xsl:template>
                                         </Input-Binding>
                                         <Output-Binding xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:pd="http://xmlns.tibco.com/bw/process/2003" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-                                            <xsl:template xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:pd="http://xmlns.tibco.com/bw/process/2003" xmlns:xsd="http://www.w3.org/2001/XMLSchema" match="/*">
+                                            <xsl:template xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:pd="http://xmlns.tibco.com/bw/process/2003" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
                                                 <RESTResponse>
                                                     <xsl:if test="$End/output">
                                                         <asciiContent>
                                                             <xsl:value-of select="$End/output"/>
                                                         </asciiContent>
                                                     </xsl:if>
+                                                    <Headers>
+                                                        <Content-Type>
+                                                            <xsl:value-of select="&quot;application/json&quot;"/>
+                                                        </Content-Type>
+                                                    </Headers>
                                                 </RESTResponse>
                                             </xsl:template>
                                         </Output-Binding>

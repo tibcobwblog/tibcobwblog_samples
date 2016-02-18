@@ -9,7 +9,7 @@
     <pd:startY>64</pd:startY>
     <pd:returnBindings>
         <output>
-            <xsl:value-of select="concat(&quot;Hello, &quot;,$Start/name)"/>
+            <xsl:value-of select="concat('{&quot;text&quot;:&quot;Hello, ',$Start/name,'&quot;}')"/>
         </output>
     </pd:returnBindings>
     <pd:endName>End</pd:endName>
