@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:axis2="http://xsd.tns.tibco.com/bw/models/binding/soap/axis2" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmlns:schema_1456140138521="http://www.example.org/schema/1456140138521" xmlns:wsdl_1456140138442="http://www.example.org/wsdl/1456140138442" xmi:id="_M69O0NlWEeWLl6sQ_2IX9A" targetNamespace="http://tns.tibco.com/bw/composite/TIBCOBWBLOG_DynamicInvoation.module" name="TIBCOBWBLOG_DynamicInvoation.module" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_i3taANlWEeWLl6sQ_2IX9A" name="Process" promote="ComponentProcess/Process">
+    <sca:interface.wsdl xmi:id="_i3_G0NlWEeWLl6sQ_2IX9A" interface="http://www.example.org/wsdl/1456140138442#wsdl.interface(Process)" scaext:wsdlLocation="../Service%20Descriptors/Process.wsdl"/>
+    <scaext:binding xsi:type="axis2:SOAPServiceBinding" xmi:id="_rxTwkNlZEeWLl6sQ_2IX9A" name="SOAPServiceBinding" targetNamespace="http://www.tibco.com/f10c854a73654efa8417b69a183276f1/SOAPServiceBinding" portTypeQName="wsdl_1456140138442:Process" transportBindingType="HTTP" attachmentStyle="SwA" modelVersion="1.2.0" portTypeWSDLLocation="platform:/resource/TIBCOBWBLOG_DynamicInvoation.module/Service%20Descriptors/Process.wsdl">
+      <bindingType xmi:id="_rxevsNlZEeWLl6sQ_2IX9A"/>
+      <inboundConfiguration xsi:type="axis2:HttpTransportConfiguration" xmi:id="_tVNMQNlZEeWLl6sQ_2IX9A" endpointURI="/SOAPServiceBinding/process/" httpConnector="tibcobwblog_dynamicinvoation.module.HTTPConnectorResource"/>
+      <operationConfiguration xmi:id="_rxhL8NlZEeWLl6sQ_2IX9A" operationName="operation" action="operation" actionNeeded="true">
+        <bindingType xmi:id="_rxhL8dlZEeWLl6sQ_2IX9A"/>
+        <messageConfiguration xmi:id="_rxhL8tlZEeWLl6sQ_2IX9A" messageQName="wsdl_1456140138442:operationRequest" wsdlLocation="platform:/resource/TIBCOBWBLOG_DynamicInvoation.module/Service%20Descriptors/Process.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_rxhL89lZEeWLl6sQ_2IX9A" partName="parameters" partElementName="schema_1456140138521:operationRequest"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_rxhL9NlZEeWLl6sQ_2IX9A" messageQName="wsdl_1456140138442:operationResponse" messageDirection="OUTPUT" wsdlLocation="platform:/resource/TIBCOBWBLOG_DynamicInvoation.module/Service%20Descriptors/Process.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_rxhL9dlZEeWLl6sQ_2IX9A" partName="parameters" partElementName="schema_1456140138521:operationResponse"/>
+        </messageConfiguration>
+        <context xmi:id="_rxhL9tlZEeWLl6sQ_2IX9A">
+          <inputMapping xmi:id="_rxhzANlZEeWLl6sQ_2IX9A"/>
+          <outputMapping xmi:id="_rxhzAdlZEeWLl6sQ_2IX9A" direction="OUTPUT"/>
+        </context>
+      </operationConfiguration>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_rxhzAtlZEeWLl6sQ_2IX9A" bindingName="SOAPServiceBinding"/>
+  </sca:service>
+  <sca:property xmi:id="_OBtbgNlWEeWLl6sQ_2IX9A" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_OB624NlWEeWLl6sQ_2IX9A" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_OCA9gNlWEeWLl6sQ_2IX9A" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_OCEn4NlWEeWLl6sQ_2IX9A" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_OCKugNlWEeWLl6sQ_2IX9A" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_OCO_8NlWEeWLl6sQ_2IX9A" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_OCUfgNlWEeWLl6sQ_2IX9A" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_OCYw8NlWEeWLl6sQ_2IX9A" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_OCdCYNlWEeWLl6sQ_2IX9A" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:component xmi:id="_Nm-AQNlWEeWLl6sQ_2IX9A" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_Nm_OYNlWEeWLl6sQ_2IX9A" processName="tibcobwblog_dynamicinvoation.module.Process"/>
+    <sca:service xmi:id="_i3glsNlWEeWLl6sQ_2IX9A" name="Process">
+      <sca:interface.wsdl xmi:id="_i3nTYNlWEeWLl6sQ_2IX9A" interface="http://www.example.org/wsdl/1456140138442#wsdl.interface(Process)" scaext:wsdlLocation="../Service%20Descriptors/Process.wsdl"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>
